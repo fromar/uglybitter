@@ -1,0 +1,54 @@
+Make sure I have the latest from my partner's repo before I begin new work:
+$> git pull [fromar|lern] master
+If you want list all remote sources you know about:
+$> git remote
+
+Create a Topic Branch for my next task/feature/bugfix:
+$> git checkout -b [topic_branch]
+...do some work...
+
+See what I have done:
+$> git status
+
+Add paths:
+$> git add path/to/file
+$> git add path/to/*.files
+Or add everything (aggressive, use with care):
+$> git add .
+
+Remove paths:
+$> git rm path/to/deleted/file
+$> git rm path/to/deleted/*.files
+
+Commit when git status looks correct:
+$> git commit -m "Describe what was done in this commit and why."
+Forgot to commit some things or need to make a quick change to the last commit:
+...do the desired work...
+...add/rm paths...
+$> git commit --amend
+
+Make sure I have the latest from my partner's repo before I attempt to merge newly done work:
+$> git checkout master
+$> git pull [fromar|lern] master
+
+If there were changes, we need to rebase our branch against them:
+$> git checkout [topic_branch]
+$> git rebase master
+...resolve any rebase collisions (rewrites this branch's history!)...
+
+Now we can merge master cleanly against the branch:
+$> git checkout master
+$> git merge [topic_branch]
+
+List my local branches so I can manage them:
+$> git branch
+Delete Topic Branches that are finished:
+$> git branch -d [topic_branch]
+
+Push the changes to my origin to share them with my partner:
+$> git push origin master
+
+Rinse. Repeat.
+
+Deploy!
+
