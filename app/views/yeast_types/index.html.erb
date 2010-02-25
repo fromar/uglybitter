@@ -1,0 +1,38 @@
+<h1>Listing yeast_types</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Attenuation</th>
+    <th>Flocculation</th>
+    <th>Min temp</th>
+    <th>Max temp</th>
+    <th>Type</th>
+    <th>Format</th>
+    <th>Manufacturer</th>
+    <th>Origin</th>
+    <th>Is lager</th>
+  </tr>
+
+<% @yeast_types.each do |yeast_type| %>
+  <tr>
+    <td><%=h yeast_type.name %></td>
+    <td><%=h yeast_type.attenuation %></td>
+    <td><%=h yeast_type.flocculation %></td>
+    <td><%=h yeast_type.min_temp %></td>
+    <td><%=h yeast_type.max_temp %></td>
+    <td><%=h yeast_type.type %></td>
+    <td><%=h yeast_type.format %></td>
+    <td><%=h yeast_type.manufacturer %></td>
+    <td><%=h yeast_type.origin %></td>
+    <td><%=h yeast_type.is_lager %></td>
+    <td><%= link_to 'Show', yeast_type %></td>
+    <td><%= link_to 'Edit', edit_yeast_type_path(yeast_type) %></td>
+    <td><%= link_to 'Destroy', yeast_type, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New yeast_type', new_yeast_type_path %>

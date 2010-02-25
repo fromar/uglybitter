@@ -1,0 +1,25 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  attenuation: 1.5
+  flocculation: 1.5
+  min_temp: 1
+  max_temp: 1
+  type: MyString
+  format: MyString
+  manufacturer: MyString
+  origin: MyString
+  is_lager: false
+
+two:
+  name: MyString
+  attenuation: 1.5
+  flocculation: 1.5
+  min_temp: 1
+  max_temp: 1
+  type: MyString
+  format: MyString
+  manufacturer: MyString
+  origin: MyString
+  is_lager: false

@@ -9,10 +9,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100222000522) do
+ActiveRecord::Schema.define(:version => 20100225040907) do
 
   create_table "brewers", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "yeast_types", :force => true do |t|
+    t.string   "name"
+    t.float    "attenuation"
+    t.float    "flocculation"
+    t.integer  "min_temp"
+    t.integer  "max_temp"
+    t.string   "type"
+    t.string   "format"
+    t.string   "manufacturer"
+    t.string   "origin"
+    t.boolean  "is_lager"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

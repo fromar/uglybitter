@@ -1,0 +1,2 @@
+module YeastTypesHelper
+end

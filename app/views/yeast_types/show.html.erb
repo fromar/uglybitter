@@ -1,0 +1,53 @@
+<p>
+  <b>Name:</b>
+  <%=h @yeast_type.name %>
+</p>
+
+<p>
+  <b>Attenuation:</b>
+  <%=h @yeast_type.attenuation %>
+</p>
+
+<p>
+  <b>Flocculation:</b>
+  <%=h @yeast_type.flocculation %>
+</p>
+
+<p>
+  <b>Min temp:</b>
+  <%=h @yeast_type.min_temp %>
+</p>
+
+<p>
+  <b>Max temp:</b>
+  <%=h @yeast_type.max_temp %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%=h @yeast_type.type %>
+</p>
+
+<p>
+  <b>Format:</b>
+  <%=h @yeast_type.format %>
+</p>
+
+<p>
+  <b>Manufacturer:</b>
+  <%=h @yeast_type.manufacturer %>
+</p>
+
+<p>
+  <b>Origin:</b>
+  <%=h @yeast_type.origin %>
+</p>
+
+<p>
+  <b>Is lager:</b>
+  <%=h @yeast_type.is_lager %>
+</p>
+
+
+<%= link_to 'Edit', edit_yeast_type_path(@yeast_type) %> |
+<%= link_to 'Back', yeast_types_path %>

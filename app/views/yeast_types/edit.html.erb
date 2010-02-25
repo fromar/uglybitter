@@ -1,0 +1,52 @@
+<h1>Editing yeast_type</h1>
+
+<% form_for(@yeast_type) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :attenuation %><br />
+    <%= f.text_field :attenuation %>
+  </p>
+  <p>
+    <%= f.label :flocculation %><br />
+    <%= f.text_field :flocculation %>
+  </p>
+  <p>
+    <%= f.label :min_temp %><br />
+    <%= f.text_field :min_temp %>
+  </p>
+  <p>
+    <%= f.label :max_temp %><br />
+    <%= f.text_field :max_temp %>
+  </p>
+  <p>
+    <%= f.label :type %><br />
+    <%= f.text_field :type %>
+  </p>
+  <p>
+    <%= f.label :format %><br />
+    <%= f.text_field :format %>
+  </p>
+  <p>
+    <%= f.label :manufacturer %><br />
+    <%= f.text_field :manufacturer %>
+  </p>
+  <p>
+    <%= f.label :origin %><br />
+    <%= f.text_field :origin %>
+  </p>
+  <p>
+    <%= f.label :is_lager %><br />
+    <%= f.check_box :is_lager %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @yeast_type %> |
+<%= link_to 'Back', yeast_types_path %>
