@@ -1,0 +1,24 @@
+<h1>Listing hops_types</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Alpha</th>
+    <th>Description</th>
+  </tr>
+
+<% @hops_types.each do |hops_type| %>
+  <tr>
+    <td><%=h hops_type.name %></td>
+    <td><%=h hops_type.alpha %></td>
+    <td><%=h hops_type.description %></td>
+    <td><%= link_to 'Show', hops_type %></td>
+    <td><%= link_to 'Edit', edit_hops_type_path(hops_type) %></td>
+    <td><%= link_to 'Destroy', hops_type, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New hops_type', new_hops_type_path %>

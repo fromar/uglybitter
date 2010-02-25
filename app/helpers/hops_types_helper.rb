@@ -1,0 +1,2 @@
+module HopsTypesHelper
+end

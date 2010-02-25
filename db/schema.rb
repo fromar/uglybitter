@@ -9,10 +9,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100225040907) do
+ActiveRecord::Schema.define(:version => 20100225045254) do
 
   create_table "brewers", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "hops_types", :force => true do |t|
+    t.string   "name"
+    t.float    "alpha"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

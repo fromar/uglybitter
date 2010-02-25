@@ -1,0 +1,18 @@
+<p>
+  <b>Name:</b>
+  <%=h @hops_type.name %>
+</p>
+
+<p>
+  <b>Alpha:</b>
+  <%=h @hops_type.alpha %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @hops_type.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_hops_type_path(@hops_type) %> |
+<%= link_to 'Back', hops_types_path %>

@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :hops_types
+
   map.resources :yeast_types
 
   map.resources :brewers
