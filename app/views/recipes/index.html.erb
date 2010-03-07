@@ -1,23 +1,12 @@
-<h1>Listing recipes</h1>
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Private</th>
-  </tr>
+<h1><%= Recipe.count %> Recipes</h1>
 
 <% @recipes.each do |recipe| %>
-  <tr>
-    <td><%=h recipe.name %></td>
-    <td><%=h recipe.description %></td>
-    <td><%=h recipe.private %></td>
-    <td><%= link_to 'Show', recipe %></td>
-    <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
-    <td><%= link_to 'Destroy', recipe, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+  <div>
+    <p><b><%= link_to recipe.name, recipe %></b></p>
+    <p>Brewers: <%= recipe.brewers.map(&:name).join(", ") %></p>
+    <p><%= truncate recipe.description, 100 %></p>
+  </div>
 <% end %>
-</table>
 
 <br />
 

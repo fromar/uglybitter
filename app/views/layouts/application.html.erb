@@ -4,17 +4,16 @@
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>Homebrew Henchman</title>
+  <%= javascript_include_tag 'jquery-1.4.2', 'application' %>
   <%= stylesheet_link_tag 'scaffold' %>
   <%= stylesheet_link_tag 'formtastic', 'formtastic_changes' %>
-  
-  <!-- TODO: jQuery Include -->
 </head>
 
 <body>
   <div id="header">
     <%= render :partial => "shared/header" %>
   </div>
-  
+
   <%= yield %>
 </body>
 

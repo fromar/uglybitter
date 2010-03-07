@@ -8,13 +8,20 @@
     <%= f.text_field :name %>
   </p>
   <p>
+    <%= f.check_box :private %> <%= f.label :private, "Private Recipe?" %>
+  </p>
+  <p>
     <%= f.label :description %><br />
     <%= f.text_area :description %>
   </p>
-  <p>
-    <%= f.label :private %><br />
-    <%= f.check_box :private %>
-  </p>
+
+  <% f.fields_for :authorships do |authors_form| %>
+    <p>
+      <%= authors_form.label :brewer_id, "Author:" %><br />
+      <%= authors_form.select :brewer_id, options_from_collection_for_select(Brewer.all, 'id', 'name') %>
+    </p>
+  <% end %>
+
   <p>
     <%= f.submit 'Create' %>
   </p>

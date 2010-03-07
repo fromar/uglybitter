@@ -13,7 +13,11 @@ class BrewersController < ApplicationController
   # GET /brewers/1
   # GET /brewers/1.xml
   def show
-    @brewer = Brewer.find(params[:id])
+    if params[:brewer_name]
+      @brewer = Brewer.find_by_name(params[:brewer_name])
+    else
+      @brewer = Brewer.find(params[:id])
+    end
 
     respond_to do |format|
       format.html # show.html.erb

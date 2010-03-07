@@ -1,8 +1,15 @@
-<p>
-  <b>Name:</b>
-  <%=h @brewer.name %>
-</p>
+<h1>Brewer <%= @brewer.name %>'s Page</h1>
 
+<h2><%= @brewer.recipes.count %> Recipes</h2>
+<ul>
+<% for recipe in @brewer.recipes %>
+  <li><%= link_to recipe.name, recipe %></li>
+<% end %>
+</ul>
+
+<h3>Recent Batches (todo)</h3>
+
+<h3>Social Options (todo)</h3>
 
 <%= link_to 'Edit', edit_brewer_path(@brewer) %> |
 <%= link_to 'Back', brewers_path %>

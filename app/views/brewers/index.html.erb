@@ -1,4 +1,4 @@
-<h1>Listing brewers</h1>
+<h1>Brewers</h1>
 
 <table>
   <tr>
@@ -7,10 +7,7 @@
 
 <% @brewers.each do |brewer| %>
   <tr>
-    <td><%=h brewer.name %></td>
-    <td><%= link_to 'Show', brewer %></td>
-    <td><%= link_to 'Edit', edit_brewer_path(brewer) %></td>
-    <td><%= link_to 'Destroy', brewer, :confirm => 'Finish Him?', :method => :delete %></td>
+    <td><%= link_to brewer.name, brewer %></td>
   </tr>
 <% end %>
 </table>

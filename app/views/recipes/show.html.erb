@@ -1,18 +1,29 @@
-<p>
-  <b>Name:</b>
-  <%=h @recipe.name %>
-</p>
+<h1>Recipe: <%=h @recipe.name %></h1>
 
 <p>
-  <b>Description:</b>
   <%=h @recipe.description %>
+  <% if @recipe.private? %>
+    (private)
+  <% end %>
 </p>
 
 <p>
-  <b>Private:</b>
-  <%=h @recipe.private %>
+  <h3>Authors:</h3>
+  <ul>
+    <% for brewer in @recipe.brewers %>
+      <li><%= link_to brewer.name, brewer %></li>
+    <% end %>
+  </ul>
 </p>
 
+<h3>Malts (todo)</h3>
+<h3>Hops (todo)</h3>
+<h3>Yeasts (todo)</h3>
+<h3>Adjuncts (todo)</h3>
+<h3>Water (todo)</h3>
+<h3>Recent Batches (todo)</h3>
+
+<h2>Add To Brew Log/Brew Now! (todo)</h2>
 
 <%= link_to 'Edit', edit_recipe_path(@recipe) %> |
 <%= link_to 'Back', recipes_path %>
