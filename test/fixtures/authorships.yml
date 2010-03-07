@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  brewer_id: 1
+  recipe_id: 1
+
+two:
+  brewer_id: 1
+  recipe_id: 1
