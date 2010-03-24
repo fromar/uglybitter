@@ -1,0 +1,30 @@
+<h1>Listing malt_types</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Color</th>
+    <th>Lovibond</th>
+    <th>Character</th>
+    <th>Extract</th>
+  </tr>
+
+<% @malt_types.each do |malt_type| %>
+  <tr>
+    <td><%=h malt_type.name %></td>
+    <td><%=h malt_type.description %></td>
+    <td><%=h malt_type.color %></td>
+    <td><%=h malt_type.lovibond %></td>
+    <td><%=h malt_type.character %></td>
+    <td><%=h malt_type.extract %></td>
+    <td><%= link_to 'Show', malt_type %></td>
+    <td><%= link_to 'Edit', edit_malt_type_path(malt_type) %></td>
+    <td><%= link_to 'Destroy', malt_type, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New malt_type', new_malt_type_path %>

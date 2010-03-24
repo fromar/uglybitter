@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100324220649) do
+ActiveRecord::Schema.define(:version => 20100324224941) do
 
   create_table "adjunct_types", :force => true do |t|
     t.string   "name"
@@ -35,6 +35,28 @@ ActiveRecord::Schema.define(:version => 20100324220649) do
     t.string   "name"
     t.float    "alpha"
     t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "malr_types", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "color"
+    t.integer  "lovibond"
+    t.string   "character"
+    t.boolean  "extract"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "malt_types", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "color"
+    t.integer  "lovibond"
+    t.string   "character"
+    t.boolean  "extract"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

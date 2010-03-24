@@ -1,0 +1,33 @@
+<p>
+  <b>Name:</b>
+  <%=h @malt_type.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @malt_type.description %>
+</p>
+
+<p>
+  <b>Color:</b>
+  <%=h @malt_type.color %>
+</p>
+
+<p>
+  <b>Lovibond:</b>
+  <%=h @malt_type.lovibond %>
+</p>
+
+<p>
+  <b>Character:</b>
+  <%=h @malt_type.character %>
+</p>
+
+<p>
+  <b>Extract:</b>
+  <%=h @malt_type.extract %>
+</p>
+
+
+<%= link_to 'Edit', edit_malt_type_path(@malt_type) %> |
+<%= link_to 'Back', malt_types_path %>
