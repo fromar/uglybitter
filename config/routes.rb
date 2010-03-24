@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :adjunct_types
+
   map.resources :recipes
 
   map.resources :hops_types

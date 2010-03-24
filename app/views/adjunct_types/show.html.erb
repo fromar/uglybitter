@@ -1,0 +1,13 @@
+<p>
+  <b>Name:</b>
+  <%=h @adjunct_type.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @adjunct_type.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_adjunct_type_path(@adjunct_type) %> |
+<%= link_to 'Back', adjunct_types_path %>

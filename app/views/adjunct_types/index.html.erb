@@ -1,0 +1,22 @@
+<h1>Listing adjunct_types</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+
+<% @adjunct_types.each do |adjunct_type| %>
+  <tr>
+    <td><%=h adjunct_type.name %></td>
+    <td><%=h adjunct_type.description %></td>
+    <td><%= link_to 'Show', adjunct_type %></td>
+    <td><%= link_to 'Edit', edit_adjunct_type_path(adjunct_type) %></td>
+    <td><%= link_to 'Destroy', adjunct_type, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New adjunct_type', new_adjunct_type_path %>
