@@ -9,7 +9,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100324224941) do
+ActiveRecord::Schema.define(:version => 20100324232557) do
+
+  create_table "adjunct_additions", :force => true do |t|
+    t.integer  "adjunct_type_id"
+    t.integer  "time"
+    t.float    "amount"
+    t.boolean  "secondary"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "adjunct_types", :force => true do |t|
     t.string   "name"

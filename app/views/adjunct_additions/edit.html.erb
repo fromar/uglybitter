@@ -1,0 +1,28 @@
+<h1>Editing adjunct_addition</h1>
+
+<% form_for(@adjunct_addition) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :adjunct_type_id %><br />
+    <%= f.collection_select(:adjunct_type_id, AdjunctType.all, :id, :name) %> <br />
+  </p>
+  <p>
+    <%= f.label :time %><br />
+    <%= f.text_field :time %>
+  </p>
+  <p>
+    <%= f.label :amount %><br />
+    <%= f.text_field :amount %>
+  </p>
+  <p>
+    <%= f.label :secondary %><br />
+    <%= f.check_box :secondary %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @adjunct_addition %> |
+<%= link_to 'Back', adjunct_additions_path %>

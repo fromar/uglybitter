@@ -1,0 +1,23 @@
+<p>
+  <b>Adjunct type:</b>
+  <%=h AdjunctType.find(@adjunct_addition.adjunct_type_id).name %>
+</p>
+
+<p>
+  <b>Time:</b>
+  <%=h @adjunct_addition.time %>
+</p>
+
+<p>
+  <b>Amount:</b>
+  <%=h @adjunct_addition.amount %>
+</p>
+
+<p>
+  <b>Secondary:</b>
+  <%=h @adjunct_addition.secondary %>
+</p>
+
+
+<%= link_to 'Edit', edit_adjunct_addition_path(@adjunct_addition) %> |
+<%= link_to 'Back', adjunct_additions_path %>

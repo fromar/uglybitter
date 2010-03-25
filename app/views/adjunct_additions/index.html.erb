@@ -1,0 +1,26 @@
+<h1>Listing adjunct_additions</h1>
+
+<table>
+  <tr>
+    <th>Adjunct type</th>
+    <th>Time</th>
+    <th>Amount</th>
+    <th>Secondary</th>
+  </tr>
+
+<% @adjunct_additions.each do |adjunct_addition| %>
+  <tr>
+    <td><%=h AdjunctType.find(adjunct_addition.adjunct_type_id).name %></td>
+    <td><%=h adjunct_addition.time %></td>
+    <td><%=h adjunct_addition.amount %></td>
+    <td><%=h adjunct_addition.secondary %></td>
+    <td><%= link_to 'Show', adjunct_addition %></td>
+    <td><%= link_to 'Edit', edit_adjunct_addition_path(adjunct_addition) %></td>
+    <td><%= link_to 'Destroy', adjunct_addition, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New adjunct_addition', new_adjunct_addition_path %>

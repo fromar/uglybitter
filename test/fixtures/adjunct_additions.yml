@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  adjunct_type_id: 1
+  time: 1
+  amount: 1.5
+  secondary: false
+
+two:
+  adjunct_type_id: 1
+  time: 1
+  amount: 1.5
+  secondary: false

@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :adjunct_additions
+
   map.resources :malt_types
 
   map.resources :adjunct_types
