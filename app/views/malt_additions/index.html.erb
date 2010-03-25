@@ -1,0 +1,24 @@
+<h1>Listing malt_additions</h1>
+
+<table>
+  <tr>
+    <th>Malt type</th>
+    <th>Time</th>
+    <th>Amount</th>
+  </tr>
+
+<% @malt_additions.each do |malt_addition| %>
+  <tr>
+    <td><%=h MaltType.find(malt_addition.malt_type).name %></td>
+    <td><%=h malt_addition.time %></td>
+    <td><%=h malt_addition.amount %></td>
+    <td><%= link_to 'Show', malt_addition %></td>
+    <td><%= link_to 'Edit', edit_malt_addition_path(malt_addition) %></td>
+    <td><%= link_to 'Destroy', malt_addition, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New malt_addition', new_malt_addition_path %>

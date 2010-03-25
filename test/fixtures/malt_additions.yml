@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  malt_type: 1
+  time: 1
+  amount: 1.5
+
+two:
+  malt_type: 1
+  time: 1
+  amount: 1.5

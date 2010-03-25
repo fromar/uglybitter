@@ -1,0 +1,18 @@
+<p>
+  <b>Malt type:</b>
+    <%=h MaltType.find(@malt_addition.malt_type).name %>
+</p>
+
+<p>
+  <b>Time:</b>
+  <%=h @malt_addition.time %>
+</p>
+
+<p>
+  <b>Amount:</b>
+  <%=h @malt_addition.amount %>
+</p>
+
+
+<%= link_to 'Edit', edit_malt_addition_path(@malt_addition) %> |
+<%= link_to 'Back', malt_additions_path %>

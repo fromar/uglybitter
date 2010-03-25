@@ -1,0 +1,24 @@
+<h1>Editing malt_addition</h1>
+
+<% form_for(@malt_addition) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :malt_type %><br />
+    <%= f.collection_select(:malt_type, MaltType.all, :id, :name) %> <br />
+  </p>
+  <p>
+    <%= f.label :time %><br />
+    <%= f.text_field :time %>
+  </p>
+  <p>
+    <%= f.label :amount %><br />
+    <%= f.text_field :amount %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @malt_addition %> |
+<%= link_to 'Back', malt_additions_path %>

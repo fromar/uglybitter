@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :malt_additions
+
   map.resources :hops_additions
 
   map.resources :adjunct_additions
