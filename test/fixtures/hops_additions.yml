@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  hops_type: 1
+  time: 1
+  amount: 1
+  secondary: false
+
+two:
+  hops_type: 1
+  time: 1
+  amount: 1
+  secondary: false

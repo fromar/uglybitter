@@ -1,0 +1,23 @@
+<p>
+  <b>Hops type:</b>
+   <%=h HopsType.find(@hops_addition.hops_type).name %>
+</p>
+
+<p>
+  <b>Time:</b>
+  <%=h @hops_addition.time %>
+</p>
+
+<p>
+  <b>Amount:</b>
+  <%=h @hops_addition.amount %>
+</p>
+
+<p>
+  <b>Secondary:</b>
+  <%=h @hops_addition.secondary %>
+</p>
+
+
+<%= link_to 'Edit', edit_hops_addition_path(@hops_addition) %> |
+<%= link_to 'Back', hops_additions_path %>

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100324232557) do
+ActiveRecord::Schema.define(:version => 20100325014316) do
 
   create_table "adjunct_additions", :force => true do |t|
     t.integer  "adjunct_type_id"
@@ -36,6 +36,15 @@ ActiveRecord::Schema.define(:version => 20100324232557) do
 
   create_table "brewers", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "hops_additions", :force => true do |t|
+    t.integer  "hops_type"
+    t.integer  "time"
+    t.integer  "amount"
+    t.boolean  "secondary"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

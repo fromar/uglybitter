@@ -1,0 +1,26 @@
+<h1>Listing hops_additions</h1>
+
+<table>
+  <tr>
+    <th>Hops type</th>
+    <th>Time</th>
+    <th>Amount</th>
+    <th>Secondary</th>
+  </tr>
+
+<% @hops_additions.each do |hops_addition| %>
+  <tr>
+    <td><%=h HopsType.find(hops_addition.hops_type).name %></td>
+    <td><%=h hops_addition.time %></td>
+    <td><%=h hops_addition.amount %></td>
+    <td><%=h hops_addition.secondary %></td>
+    <td><%= link_to 'Show', hops_addition %></td>
+    <td><%= link_to 'Edit', edit_hops_addition_path(hops_addition) %></td>
+    <td><%= link_to 'Destroy', hops_addition, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New hops_addition', new_hops_addition_path %>
