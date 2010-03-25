@@ -1,0 +1,20 @@
+<h1>Editing pitching_yeast</h1>
+
+<% form_for(@pitching_yeast) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :yeast_type %><br />
+    <%= f.text_field :yeast_type %>
+  </p>
+  <p>
+    <%= f.label :parent_batch %><br />
+    <%= f.text_field :parent_batch %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @pitching_yeast %> |
+<%= link_to 'Back', pitching_yeasts_path %>

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100325021044) do
+ActiveRecord::Schema.define(:version => 20100325023545) do
 
   create_table "adjunct_additions", :force => true do |t|
     t.integer  "adjunct_type_id"
@@ -83,6 +83,13 @@ ActiveRecord::Schema.define(:version => 20100325021044) do
     t.integer  "lovibond"
     t.string   "character"
     t.boolean  "extract"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "pitching_yeasts", :force => true do |t|
+    t.integer  "yeast_type"
+    t.integer  "parent_batch"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

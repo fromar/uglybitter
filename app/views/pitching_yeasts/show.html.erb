@@ -1,0 +1,13 @@
+<p>
+  <b>Yeast type:</b>
+  <%=h YeastType.find(@pitching_yeast.yeast_type).name %>
+</p>
+
+<p>
+  <b>Parent batch:</b>
+  <%=h @pitching_yeast.parent_batch %>
+</p>
+
+
+<%= link_to 'Edit', edit_pitching_yeast_path(@pitching_yeast) %> |
+<%= link_to 'Back', pitching_yeasts_path %>

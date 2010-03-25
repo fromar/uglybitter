@@ -1,0 +1,22 @@
+<h1>Listing pitching_yeasts</h1>
+
+<table>
+  <tr>
+    <th>Yeast type</th>
+    <th>Parent batch</th>
+  </tr>
+
+<% @pitching_yeasts.each do |pitching_yeast| %>
+  <tr>
+    <td><%=h YeastType.find(pitching_yeast.yeast_type).name  %></td>
+    <td><%=h pitching_yeast.parent_batch %></td>
+    <td><%= link_to 'Show', pitching_yeast %></td>
+    <td><%= link_to 'Edit', edit_pitching_yeast_path(pitching_yeast) %></td>
+    <td><%= link_to 'Destroy', pitching_yeast, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New pitching_yeast', new_pitching_yeast_path %>
